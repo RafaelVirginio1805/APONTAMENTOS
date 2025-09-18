@@ -14,7 +14,7 @@ def extrair_numeros(texto):
     return [float(n) for n in re.findall(r'-?\d+\.\d+', str(texto))]
 
 # Carrega a planilha
-caminho_excel = 'C:/Users/Usuário/Desktop/dashboard/testar.xlsx'
+caminho_excel = 'testar.xlsx'
 df = pd.read_excel(caminho_excel)
 
 # Lista de ocupantes
@@ -114,3 +114,4 @@ with col1:
 with col2:
     st.subheader("🗺️ Mapa de apontamentos")
     st_folium(mapa, width=950, height=600)
+
